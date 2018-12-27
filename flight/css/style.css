@@ -1,0 +1,899 @@
+/*========================================================================
+// Center content
+========================================================================*/
+/*========================================================================
+// Clearfix hack
+========================================================================*/
+/*========================================================================
+// Responsive breakpoints
+========================================================================*/
+/*========================================================================
+// Global colors
+========================================================================*/
+/*========================================================================
+// Font size
+========================================================================*/
+/*========================================================================
+// Grid spacing
+========================================================================*/
+/*============================================================================
+// Text animation stylings used throughout the page
+============================================================================*/
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0rem); } }
+
+@keyframes particleAnimation {
+  from {
+    left: -100px; }
+  to {
+    left: calc( 100% + 100px); } }
+
+/*============================================================================
+// General styling definitions
+============================================================================*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  padding: 1rem; }
+
+::selection {
+  background-color: #1e6cb6;
+  color: #fff; }
+
+/*============================================================================
+// Styling for the default body font
+============================================================================*/
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #666; }
+
+/*============================================================================
+// Styling for primary header text
+============================================================================*/
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInTop;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; }
+    @media only screen and (max-width: 75em) {
+      .heading-primary--main {
+        letter-spacing: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1.2rem; } }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name: moveInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+    @media only screen and (max-width: 75em) {
+      .heading-primary--sub {
+        letter-spacing: 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .7rem; } }
+
+/*============================================================================
+// Styling for secondary header text
+============================================================================*/
+.heading-secondary {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #0e4981, #6d005e);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem; }
+  @media only screen and (max-width: 75em) {
+    .heading-secondary {
+      background-image: linear-gradient(to right, #66a8e6, #8d0c7c);
+      font-size: 2.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      background-image: linear-gradient(to right, #66a8e6, #8d0c7c);
+      font-size: 2.5rem; } }
+
+/*============================================================================
+// Styling for tertiary header text used throughout the page
+============================================================================*/
+.heading-tertiary {
+  font-size: 2rem;
+  color: #1e6cb6;
+  font-weight: 700; }
+
+/*============================================================================
+// Styling for text used in the form section
+============================================================================*/
+.heading-form {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #0e4981, #6d005e);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem; }
+  @media only screen and (max-width: 75em) {
+    .heading-form {
+      background-image: linear-gradient(to right, #66a8e6, #8d0c7c);
+      font-size: 2.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-form {
+      color: #fff;
+      font-size: 2.5rem; } }
+
+/*============================================================================
+// Styling for default paragraphs
+============================================================================*/
+.paragraph {
+  font-size: 1.5rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+/*============================================================================
+// Formatting related styling
+============================================================================*/
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+/*========================================================================
+// Styiing for the image used in the about section
+========================================================================*/
+.about-img {
+  position: relative; }
+  @media only screen and (max-width: 75em) {
+    .about-img {
+      margin: 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .about-img {
+      display: none; } }
+  .about-img__photo {
+    width: 90%;
+    box-shadow: 0 1.5rem 4rem black;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 1;
+    transition: all .2s;
+    outline-offset: 2rem;
+    margin: 6vh 0 0 0;
+    -webkit-filter: brightness(50%); }
+    @media only screen and (max-width: 75em) {
+      .about-img__photo {
+        width: 80%; } }
+    @media only screen and (max-width: 37.5em) {
+      .about-img__photo {
+        width: 100%; } }
+    .about-img__photo--p1 {
+      left: 5rem;
+      top: -2rem; }
+      @media only screen and (max-width: 75em) {
+        .about-img__photo--p1 {
+          left: 0;
+          top: 0; } }
+      @media only screen and (max-width: 37.5em) {
+        .about-img__photo--p1 {
+          left: 0;
+          top: 0; } }
+    .about-img__photo:hover {
+      -webkit-filter: brightness(200%); }
+
+/*========================================================================
+// Styling for the rocket animation in the about section
+========================================================================*/
+.about-rocket {
+  position: relative;
+  z-index: 2; }
+  @media only screen and (max-width: 37.5em) {
+    .about-rocket {
+      display: none; } }
+  .about-rocket body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #eee 0%, #eee 70%, #fff 100%);
+    overflow: hidden; }
+  .about-rocket .rocket {
+    position: absolute;
+    top: 6vh;
+    width: 80px;
+    left: 50%; }
+    @media only screen and (max-width: 75em) {
+      .about-rocket .rocket {
+        top: 8vh;
+        left: 35%; } }
+    .about-rocket .rocket .rocket-body {
+      width: 80px;
+      left: calc(50% - 50px);
+      animation: bounce 0.5s infinite; }
+      @media only screen and (max-width: 75em) {
+        .about-rocket .rocket .rocket-body {
+          top: 1vh;
+          left: 35%; } }
+      @media only screen and (max-width: 37.5em) {
+        .about-rocket .rocket .rocket-body {
+          top: 1vh; } }
+      .about-rocket .rocket .rocket-body .body {
+        background-color: #f7f7f7;
+        height: 180px;
+        left: calc(50% - 50px);
+        border-top-right-radius: 100%;
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-top: 5px solid #fff; }
+      .about-rocket .rocket .rocket-body:before {
+        content: '';
+        position: absolute;
+        left: calc(50% - 24px);
+        width: 48px;
+        height: 13px;
+        background-color: #444;
+        bottom: -13px;
+        border-bottom-right-radius: 60%;
+        border-bottom-left-radius: 60%; }
+    .about-rocket .rocket .window {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      background-color: #0e4981;
+      left: calc(50% - 25px);
+      top: 40px;
+      border: 5px solid #eee; }
+    .about-rocket .rocket .fin {
+      position: absolute;
+      z-index: -100;
+      height: 55px;
+      width: 50px;
+      background-color: #0e4981; }
+    .about-rocket .rocket .fin-left {
+      left: -30px;
+      top: calc(100% - 55px);
+      border-top-left-radius: 80%;
+      border-bottom-left-radius: 20%; }
+    .about-rocket .rocket .fin-right {
+      right: -30px;
+      top: calc(100% - 55px);
+      border-top-right-radius: 80%;
+      border-bottom-right-radius: 20%; }
+    .about-rocket .rocket .exhaust-flame {
+      position: absolute;
+      top: 90%;
+      width: 28px;
+      background: linear-gradient(to bottom, transparent 10%, #fff 100%);
+      height: 91px;
+      left: calc(50% - 14px);
+      animation: exhaust 0.2s infinite; }
+  .about-rocket .star li {
+    list-style: none;
+    position: absolute; }
+    .about-rocket .star li:before, .about-rocket .star li:after {
+      content: '';
+      position: absolute;
+      background-color: #fff; }
+    .about-rocket .star li:before {
+      width: 10px;
+      height: 2px;
+      border-radius: 50%; }
+    .about-rocket .star li:after {
+      height: 8px;
+      width: 2px;
+      left: 4px;
+      top: -3px; }
+    .about-rocket .star li:first-child {
+      top: 30px;
+      left: 110px;
+      animation: twinkle 0.4s infinite; }
+    .about-rocket .star li:nth-child(2) {
+      top: 0;
+      left: 60px;
+      animation: twinkle 0.5s infinite; }
+      .about-rocket .star li:nth-child(2):before {
+        height: 1px;
+        width: 5px; }
+      .about-rocket .star li:nth-child(2):after {
+        width: 1px;
+        height: 5px;
+        top: -2px;
+        left: 2px; }
+    .about-rocket .star li:nth-child(3) {
+      left: 120px;
+      top: 240px;
+      animation: twinkle 1s infinite; }
+    .about-rocket .star li:nth-child(4) {
+      left: -100px;
+      top: 200px;
+      animation: twinkle 0.5s ease infinite; }
+    .about-rocket .star li:nth-child(5) {
+      left: 180px;
+      top: 160px;
+      animation: twinkle 0.4s ease infinite; }
+    .about-rocket .star li:nth-child(6) {
+      top: 87px;
+      left: -119px;
+      animation: twinkle 0.2s infinite; }
+      .about-rocket .star li:nth-child(6):before {
+        height: 1px;
+        width: 5px; }
+      .about-rocket .star li:nth-child(6):after {
+        width: 1px;
+        height: 5px;
+        top: -2px;
+        left: 2px; }
+
+@keyframes fumes {
+  50% {
+    transform: scale(1.5);
+    background-color: transparent; }
+  51% {
+    transform: scale(0.8); }
+  100% {
+    background-color: #fff;
+    transform: scale(1); } }
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0px, 0px, 0); }
+  50% {
+    transform: translate3d(0px, -4px, 0); }
+  100% {
+    transform: translate3d(0px, 0px, 0); } }
+
+@keyframes exhaust {
+  0% {
+    background: linear-gradient(to bottom, transparent 10%, #fff 100%); }
+  50% {
+    background: linear-gradient(to bottom, transparent 8%, #fff 100%); }
+  75% {
+    background: linear-gradient(to bottom, transparent 12%, #fff 100%); } }
+
+@keyframes fumes2 {
+  50% {
+    transform: scale(1.1); } }
+
+@keyframes twinkle {
+  80% {
+    transform: scale(1.1);
+    opacity: 0.7; } }
+
+/*========================================================================
+// Styling for the text boxes in the details section
+========================================================================*/
+.details-text-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  margin: 6rem 0rem 0rem 0rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 3px;
+  transition: transform .3s;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 75em) {
+    .details-text-box {
+      margin: 6rem 1rem 1rem 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .details-text-box {
+      margin: 6rem 0rem 0rem 0rem; } }
+  .details-text-box__icon {
+    font-size: 5rem;
+    display: block;
+    margin: 0 auto 20px auto;
+    color: #0e4981; }
+  .details-text-box__hr {
+    height: 4px;
+    background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+    border: 0;
+    margin-bottom: 15px;
+    border-bottom: 4px #6d005e; }
+  .details-text-box:hover {
+    transform: translateY(-1rem) scale(1); }
+
+/*============================================================================
+// Styling for the shooting star animation in the details section
+============================================================================*/
+.details-shooting-stars {
+  position: fixed;
+  left: 0px;
+  top: 50px;
+  width: 1px;
+  height: 1px;
+  position: fixed;
+  animation-name: particleAnimation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 1; }
+  @media only screen and (max-width: 75em) {
+    .details-shooting-stars {
+      z-index: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .details-shooting-stars {
+      z-index: 0; } }
+  .details-shooting-stars-star1 {
+    animation-duration: 12s;
+    top: 25%; }
+  .details-shooting-stars-star2 {
+    animation-duration: 7s;
+    top: 60%; }
+  .details-shooting-stars-star3 {
+    animation-duration: 20s;
+    top: 90%; }
+  .details-shooting-stars:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100px;
+    right: 1px;
+    top: 0px;
+    height: 3px;
+    background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 100%); }
+
+/*============================================================================
+// Styling for the flight section
+============================================================================*/
+.flight-package {
+  position: relative;
+  height: 42rem;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+  transition: transform .3s;
+  z-index: 2; }
+  .flight-package:hover {
+    transform: translateY(-1rem) scale(1); }
+  .flight-package__bg {
+    background-size: cover;
+    height: 15rem;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-image: linear-gradient(to right, #0e4981, #6d005e);
+    z-index: 2; }
+    @media only screen and (max-width: 75em) {
+      .flight-package__bg {
+        height: 12rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .flight-package__bg {
+        height: 15rem; } }
+  .flight-package__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 0rem;
+    width: 100%;
+    z-index: 2; }
+    @media only screen and (max-width: 75em) {
+      .flight-package__heading {
+        line-height: normal; } }
+    @media only screen and (max-width: 37.5em) {
+      .flight-package__heading {
+        line-height: 100px; } }
+  .flight-package__details {
+    padding: 3rem; }
+    @media only screen and (max-width: 75em) {
+      .flight-package__details {
+        padding: 1.2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .flight-package__details {
+        padding: 3rem; } }
+    .flight-package__details ul {
+      list-style: none;
+      width: 100%;
+      margin: 0 auto; }
+      .flight-package__details ul li {
+        text-align: center;
+        font-size: 1.4rem;
+        padding: 1rem 0 1rem 0; }
+        .flight-package__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .flight-package__btn {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    text-align: center;
+    height: 4rem;
+    border-radius: 3px;
+    color: white;
+    background-color: #e06000;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #e06000;
+    font-size: 2em;
+    padding: 15px 30px 15px 30px;
+    line-height: 0px; }
+    @media only screen and (max-width: 37.5em) {
+      .flight-package__btn {
+        width: 220px;
+        font-size: 1.5em;
+        padding: 10px 20px 10px 20px; } }
+    .flight-package__btn:hover {
+      background-color: #e68134; }
+
+/*============================================================================
+// Styling for the footer
+============================================================================*/
+.footer {
+  height: 400px;
+  position: relative;
+  z-index: 3; }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      height: 200px; } }
+  .footer__text {
+    position: relative;
+    top: 20rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 4; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__text {
+        top: 10rem; } }
+  .footer__link {
+    color: #e68134;
+    z-index: 3; }
+
+/*============================================================================
+// Styling for the contact form
+============================================================================*/
+.form__header {
+  line-height: 1.4;
+  text-align: center; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 100%;
+  display: block;
+  transition: all .3s; }
+  .form__input::-webkit-input-placeholder {
+    color: #444; }
+
+.form__item {
+  padding: 1rem; }
+
+.form__btn {
+  width: 100%;
+  height: 4rem;
+  border-radius: 3px;
+  color: white;
+  background-color: #e06000;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #e06000;
+  font-size: 2em;
+  padding: 15px 30px 15px 30px;
+  line-height: 0px; }
+  @media only screen and (max-width: 37.5em) {
+    .form__btn {
+      font-size: 1.5em;
+      padding: 10px 20px 10px 20px; } }
+  .form__btn:hover {
+    background-color: #e68134;
+    cursor: pointer; }
+
+/*============================================================================
+// Styling for the guide section
+============================================================================*/
+.guide {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+  padding: 6rem;
+  padding-left: 7rem;
+  transition: transform .3s;
+  font-size: 1.5rem; }
+  @media only screen and (max-width: 75em) {
+    .guide {
+      padding: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .guide {
+      padding: 2rem; } }
+  .guide__img {
+    display: block;
+    object-fit: cover;
+    height: 25rem;
+    width: 100%;
+    border-radius: 3px; }
+    @media only screen and (max-width: 75em) {
+      .guide__img {
+        height: auto;
+        width: 100%; } }
+    @media only screen and (max-width: 37.5em) {
+      .guide__img {
+        height: auto;
+        width: 100%; } }
+  .guide__text {
+    margin: 2vh 0 0 0; }
+  .guide:hover {
+    transform: translateY(-1rem) scale(1); }
+
+/*============================================================================
+// Styling for the header
+============================================================================*/
+.header {
+  position: relative;
+  height: 98vh;
+  background-image: linear-gradient(to right, rgba(102, 168, 230, 0.1), rgba(14, 73, 129, 0.1)), url(../img/flight-header.jpg);
+  background-size: cover;
+  background-position: top;
+  z-index: 3; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      width: 100%; } }
+  .header__text-box {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .header__text-box {
+        top: 28%; } }
+
+/*============================================================================
+// Styling for the navigation button and its functionality
+============================================================================*/
+.navigation {
+  background: url(../img/flight-logo.png);
+  position: fixed;
+  height: 7rem;
+  width: 7rem;
+  object-fit: contain;
+  top: 5rem;
+  right: 5rem;
+  border-radius: 50%;
+  z-index: 9999;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  cursor: pointer; }
+  @media only screen and (max-width: 75em) {
+    .navigation {
+      height: 0rem;
+      width: 0rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .navigation {
+      height: 0rem;
+      width: 0rem; } }
+  .navigation:hover {
+    transform: scale(1.05); }
+
+/*============================================================================
+// Stling for general grid spacing of divs
+============================================================================*/
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .row:not(:last-child) {
+        margin-bottom: 0; } }
+    @media only screen and (max-width: 75em) {
+      .row:not(:last-child) {
+        margin-bottom: 0; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+      @media only screen and (max-width: 75em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0; } }
+      @media only screen and (max-width: 37.5em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 6rem; } }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+    @media only screen and (max-width: 75em) {
+      .row .col-1-of-2 {
+        width: 100%;
+        padding: 0 6rem 0 6rem;
+        margin-bottom: 4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .row .col-1-of-2 {
+        width: 100%;
+        padding: 2rem;
+        margin-bottom: 2rem; } }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+    @media only screen and (max-width: 75em) {
+      .row .col-1-of-3 {
+        width: 33%;
+        padding: 0 2rem 2rem 2rem;
+        margin-bottom: 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .row .col-1-of-3 {
+        width: 100%;
+        padding: 2rem; } }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+    @media only screen and (max-width: 75em) {
+      .row .col-1-of-4 {
+        width: 50%;
+        padding: 0;
+        margin-bottom: 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .row .col-1-of-4 {
+        width: 100%;
+        padding: 0 2rem 0 2rem; } }
+
+/*========================================================================
+// Styling for top-level section elements
+========================================================================*/
+.section-about {
+  position: relative;
+  background-color: white;
+  padding: 25rem 0;
+  margin-top: -10rem;
+  z-index: 2; }
+  @media only screen and (max-width: 75em) {
+    .section-about {
+      margin-bottom: 36rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-about {
+      padding: 25rem 0 5rem 0;
+      margin-bottom: 2rem; } }
+
+.section-details {
+  margin-top: -10rem;
+  background-image: url(../img/flight-galaxy-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 18rem 0; }
+  @media only screen and (max-width: 75em) {
+    .section-details {
+      padding: 2rem;
+      margin-top: 1rem;
+      height: 100%;
+      background-attachment: scroll;
+      background-size: cover; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-details {
+      padding: 0 0 7rem 0;
+      height: 100%;
+      background-attachment: scroll;
+      background-size: cover; } }
+
+.section-guide {
+  position: relative;
+  padding: 10rem 0;
+  background-color: white;
+  z-index: 2; }
+  @media only screen and (max-width: 75em) {
+    .section-guide {
+      padding: 15rem 0 0 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-guide {
+      padding: 15rem 0 0 0; } }
+
+.section-flight {
+  background-image: url(../img/flight-tours-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding: 15rem 0; }
+  .section-flight a {
+    text-decoration: none; }
+  @media only screen and (max-width: 75em) {
+    .section-flight {
+      height: 100%;
+      padding: 5rem 0;
+      background-attachment: scroll;
+      background-size: cover; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-flight {
+      height: 100%;
+      padding: 5rem 0;
+      background-attachment: scroll;
+      background-size: cover; } }
+
+.section-contact {
+  padding: 10rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .section-contact {
+      padding: 5rem 0; } }
+
+.contact {
+  position: relative;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 30%, transparent 60%), url(../img/flight-contact.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 2; }
+  .contact__form {
+    width: 30%;
+    padding: 10rem; }
+    @media only screen and (max-width: 75em) {
+      .contact__form {
+        width: 50%; } }
+    @media only screen and (max-width: 37.5em) {
+      .contact__form {
+        width: 100%; } }
+  @media only screen and (max-width: 75em) {
+    .contact {
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 30%, transparent 60%), url(../img/flight-contact.jpg);
+      background-position: center;
+      height: 100%;
+      background-attachment: scroll;
+      background-size: cover; } }
+  @media only screen and (max-width: 37.5em) {
+    .contact {
+      background-image: url(../img/flight-contact.jpg);
+      background-position: center;
+      height: 100%;
+      background-attachment: scroll;
+      background-size: cover; } }
+
+.contact__form {
+  position: relative;
+  padding: 8rem 6rem 8rem 6rem; }
+  @media only screen and (max-width: 75em) {
+    .contact__form {
+      padding: 6rem 4rem 6rem 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .contact__form {
+      padding: 8rem 6rem 8rem 6rem; } }
+
+.section-footer {
+  position: relative;
+  background-color: #0e4981;
+  z-index: 3; }

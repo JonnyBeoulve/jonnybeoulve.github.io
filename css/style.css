@@ -1,0 +1,795 @@
+/*======================================================================
+// Main styling.
+======================================================================*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html,
+body {
+	height: 100%;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Roboto Condensed", sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	font-size: 17px;
+	color: #6b6b6b;
+	line-height: 30px;
+	font-family: "Open Sans", sans-serif;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+li,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	max-width: 100px;
+	height: 2px;
+	border-top: 1px solid #066b98;
+	border-bottom: 1px solid #066b98;
+}
+
+/*======================================================================
+// Common styling.
+======================================================================*/
+.fix {
+	overflow: hidden;
+}
+
+.pt100 {
+	padding-top: 100px;
+}
+
+.pb100 {
+	padding-bottom: 100px;
+}
+
+.mb100 {
+	margin-bottom: 100px;
+}
+
+.mb70 {
+	margin-bottom: 70px;
+}
+
+.mb40 {
+	margin-bottom: 40px;
+}
+
+.mb20 {
+	margin-bottom: 20px;
+}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.mt25 {
+	margin-top: 25px;
+}
+
+.nopad {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.stitle {
+	text-align: center;
+}
+
+.stitle h2 {
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 40px;
+	font-weight: 300;
+	text-transform: capitalize;
+	color: #066b98;
+}
+.stitle h3 {
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 36px;
+	font-weight: 300;
+	text-transform: capitalize;
+	color: #fff;
+}
+
+.site-btn {
+	position: relative;
+	color: #fff;
+	padding: 14px 40px;
+	border: none;
+	font-family: "Roboto Condensed", sans-serif;
+	line-height: normal;
+	border-radius: 50px;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+.site-btn:hover,
+.site-btn:focus {
+	outline: none;
+}
+
+#background-1 {
+	background-repeat: no-repeat;
+	background-position: right 20px top -45px;
+}
+
+.mouse-bg {
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	position: absolute;
+}
+
+.responsive {
+	display: none;
+}
+
+.header-section {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	background: rgba(255, 255, 255, 0);
+	padding: 15px 50px;
+	-webkit-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+.header-section .menu-list {
+	list-style: none;
+	float: right;
+	margin-top: 8px;
+}
+
+.header-section .menu-list li {
+	display: inline;
+}
+
+.header-section .menu-list li a {
+	display: inline-block;
+	padding: 10px;
+	color: #fff;
+	position: relative;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.09em;
+}
+
+.header-section .menu-list li a:after {
+	position: absolute;
+	content: "";
+	width: 0px;
+	height: 2px;
+	bottom: 6px;
+	left: 50%;
+	margin-left: 0px;
+	background: #fff;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+
+.header-section .menu-list li a:hover:after {
+	width: 10px;
+	margin-left: -5px;
+}
+
+.header-section .menu-list .current a:after {
+	width: 10px;
+	margin-left: -5px;
+}
+
+.header-section.sticky {
+	position: fixed;
+	background: #000;
+	padding: 10px 30px;
+	border-bottom: 1px solid #27a2db;
+}
+
+.header-section.sticky .logo img {
+	height: 55px;
+}
+
+.header-section.sticky .menu-list li a {
+	color: #808080;
+}
+
+.header-section.sticky .menu-list li a:after {
+	background: #a0a0a0;
+}
+
+/*======================================================================
+// Intro styling.
+======================================================================*/
+.intro-section {
+	height: 100%;
+	position: relative;
+}
+
+.bg-cms {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.bg-cms:after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #000;
+	opacity: 0.6;
+}
+
+.intro-bg {
+	background-image: url("../img/bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.intro-inner {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	display: table;
+}
+
+.intro-inner .intro-content {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.intro-inner .intro-content .container {
+	padding-left: 60px;
+}
+
+.intro-inner .intro-content h2 {
+	color: #fff;
+	font-size: 100px;
+	letter-spacing: -3px;
+}
+
+.intro-inner .intro-content p {
+	margin-top: 20px;
+	color: #fff;
+}
+
+/*======================================================================
+// About styling.
+======================================================================*/
+.about-section {
+	position: relative;
+	background-color: #f3f5f7;
+	border-bottom: 1px solid #ccc;
+}
+
+.about-top {
+	text-align: center;
+}
+
+.profile-img {
+	border: 3px ridge #066b98;
+}
+
+.about-text h2 {
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: 300;
+	margin-bottom: 16px;
+	cursor: default;
+	color: #066b98;
+}
+
+.about-text p ins {
+	text-decoration-style: wavy;
+}
+
+/*======================================================================
+// Skillset styling.
+======================================================================*/
+.skillset-section {
+	background-color: #e6eaee;
+	border-bottom: 1px solid #ccc;
+}
+
+.skillset-item {
+	color: #344e5a;
+	text-align: center;
+	padding: 45px 15px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),
+				0 2px 8px 0 rgba(0,0,0,0.12);
+	border-bottom: 3px ridge #066b98;
+
+}
+
+.skillset-item:hover {
+	transition: scale(1.05);
+}
+
+.skillset-item i {
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+
+.skillset-item h4 {
+	text-transform: capitalize;
+	font-family: "Roboto Condensed", sans-serif;
+	margin-bottom: 20px;
+}
+
+.skillset-item p {
+	font-size: 15px;
+	line-height: 22px;
+}
+
+/*======================================================================
+// Experience and Education (resume) styling.
+======================================================================*/
+.resume-section {
+	background-color: #f3f5f7;
+	border-bottom: 1px solid #ccc;
+}
+
+.resume-item {
+	margin-bottom: 65px;
+}
+
+.resume-item h2 {
+	color: #344e5a;
+	font-size: 20px;
+}
+
+.resume-item .resume-left {
+	text-align: right;
+}
+
+.resume-item .resume-left div {
+	padding-right: 100px;
+}
+
+.resume-item .resume-left p {
+	font-size: 15px;
+}
+
+.resume-item .resume-right {
+	position: relative;
+}
+
+.resume-item .resume-right h2 {
+	color: #344e5a;
+	margin-bottom: 20px;
+}
+
+.resume-item .resume-right:after {
+	position: absolute;
+	content: "";
+	width: 1px;
+	height: calc(100% + 65px);
+	left: -45px;
+	top: 0;
+	opacity: .5;
+}
+
+.resume-item:last-child {
+	margin-bottom: 0;
+}
+
+.resume-item:last-child .resume-right:after {
+	height: 0;
+}
+
+/*======================================================================
+// Portfolio styling.
+======================================================================*/
+.portfolio-section {
+	background-color: #e6eaee;
+}
+
+.portfolio-filter {
+	list-style: none;
+	text-align: center;
+}
+
+.portfolio-filter li {
+	display: inline-block;
+	margin: 0 4px;
+	font-size: 18px;
+	padding: 2px 0;
+	cursor: pointer;
+	color: #344e5a;
+	-webkit-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+.portfolio-filter li.active {
+	background: #27a2db;
+	padding: 3px 12px;
+	border-radius: 20px;
+}
+
+.work-item {
+	position: relative;
+	display: block;
+}
+
+.work-item img {
+	min-width: 100%;
+}
+
+.work-item .work-inner {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: transparent;
+	z-index: 1;
+	-webkit-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+.work-item .work-inner .work-info {
+	position: relative;
+	text-align: center;
+	top: 50%;
+	margin-top: -28px;
+}
+
+.work-item .work-inner .work-info h2 {
+	color: #fff;
+	font-size: 20px;
+	margin-bottom: 9px;
+	opacity: 0;
+	position: relative;
+	top: -40px;
+	-webkit-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+.work-item .work-inner .work-info h3 {
+	color: #fff;
+	font-size: 12px;
+	display: inline-block;
+	background: #27a2db;
+	padding: 6px 20px;
+	border-radius: 20px;
+	opacity: 0;
+	position: relative;
+	top: 40px;
+	-webkit-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+.work-item:hover .work-inner {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.work-item:hover .work-inner .work-info h2,
+.work-item:hover .work-inner .work-info h3 {
+	opacity: 1;
+	top: 0;
+	-webkit-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+.work-popup {
+	max-width: 550px;
+	background: #fff;
+	position: relative !important;
+	margin: 30px auto;
+	left: 0 !important;
+	opacity: 0;
+	-webkit-transform: scale(0.8);
+	transform: scale(0.8);
+	transition: all 0.5s cubic-bezier(0.56, 0.16, 0.15, 0.86) 0s;
+	-webkit-transition: all 0.5s cubic-bezier(0.56, 0.16, 0.15, 0.86) 0s;
+}
+
+.work-popup img {
+	width: 100%;
+	height: 100%;
+	cursor: default;
+}
+
+.mfp-ready .work-popup {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+.mfp-removing .work-popup {
+	-webkit-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0;
+}
+
+.work-popup-content {
+	padding: 25px;
+	cursor: default;
+}
+
+.work-popup-content h3 {
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: 300;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+	color: #344e5a;
+	cursor: default;
+}
+
+.work-popup-content p {
+	text-align: left;
+	line-height: 24px;
+	font-size: 17px;
+	font-family: "Open Sans", sans-serif;
+	cursor: default;
+	color: #6b6b6b;
+}
+
+.work-popup-content a {
+	font-weight: 300;
+	font-size: 1.1em;
+	color: #27a2db;
+	text-decoration: underline;
+}
+
+.work-popup-content a:hover {
+	color: #344e5a;
+	text-decoration: underline;
+}
+
+.mfp-close-btn-in .mfp-close {
+	color: #27a2db;
+	text-shadow: 0 0 11px black;
+}
+
+/*======================================================================
+// Footer styling.
+======================================================================*/
+
+.footer-hr {
+	border-color: white;
+}
+
+.footer-section .social-links {
+	margin-bottom: 5px;
+}
+
+.footer-section .social-links a {
+	display: inline-table;
+	text-align: center;
+	height: 60px;
+	width: 60px;
+	color: #fff;
+	border-radius: 50%;
+	margin: 0 5px;
+}
+
+.footer-section .social-links a:hover {
+	-ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari */
+	transform: scale(1.05);
+}
+
+.footer-section .social-links a i {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.footer-section .social-links a.linkedin {
+	background: #2D5DA1;
+}
+
+.footer-section .social-links a.github {
+	background: darkslategrey;
+}
+
+.footer-section .social-links a.twitter {
+	background: #1AB1E5;
+}
+
+.footer-section .social-links a.youtube {
+	background: #DF7EA5;
+}
+
+.footer-section p {
+	font-size: 14px;
+	margin-bottom: 0;
+	line-height: normal;
+}
+
+.contact-info {
+	color: white;
+	text-align: center;
+}
+
+.contact-info i {
+	width: 75px;
+	height: 75px;
+	padding-top: 25px;
+	border-radius: 70px;
+	box-shadow: 0 0 15px 0px #27a2db;
+	margin-bottom: 15px;
+	font-size: 25px;
+	color: white;
+}
+
+.contact-info p {
+	color: white;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.footer-section {
+	background: #111;
+	text-align: center;
+	padding: 70px 0;
+}
+
+/*======================================================================
+// Responsive styling.
+======================================================================*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.intro-bg {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.header-section.sticky {
+		border-bottom: none;
+	}
+	.about-img {
+		margin-bottom: 20px;
+	}
+
+	.about-text h2 {
+		margin-top: 20px;
+	}
+
+	.page-top-info h2 {
+		font-size: 40px;
+	}
+}
+@media only screen and (max-width: 1090px) {
+	#background-1 {
+		background-position: right -30px top -45px;
+	}
+
+	.intro-bg {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.intro-bg {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.header-section.sticky {
+		border-bottom: none;
+	}
+	.skillset-item,
+	.blog-item {
+		margin-bottom: 30px;
+	}
+	.resume-item .resume-left {
+		text-align: left;
+	}
+	.header-section {
+		padding: 10px 30px;
+	}
+	.header-section.bgc {
+		background: #000;
+	}
+	.header-section.bgc .logo {
+		margin-bottom: 10px;
+	}
+	.header-section .menu-list {
+		display: none;
+		float: none;
+		clear: both;
+		border-top: 1px solid #222;
+	}
+	.header-section .menu-list li {
+		display: inline;
+	}
+	.header-section .menu-list li a {
+		display: block;
+		padding: 10px;
+	}
+	.header-section .menu-list li a:after {
+		left: 0%;
+	}
+	.header-section .menu-list li a:hover:after {
+		width: 10px;
+		margin-left: 10px;
+	}
+	.header-section .menu-list .current a:after {
+		margin-left: 10px;
+	}
+	.responsive {
+		display: block;
+		color: #fff;
+		font-size: 34px;
+		position: absolute;
+		right: 30px;
+	}
+	.intro-inner .intro-content h2 {
+		font-size: 50px;
+	}
+	.about-img {
+		margin-bottom: 20px;
+	}
+	.about-text h2 {
+		margin-top: 20px;
+	}
+	.about-top h2{
+		font-size: 25px;
+	}
+	.contact-info {
+		margin-bottom: 30px;
+	}
+	.contact-info:last-child {
+		margin-bottom: 0;
+	}
+	.page-top-info h2 {
+		font-size: 30px;
+	}
+}
+
+/* Small Mobile (320px) */
+@media only screen and (max-width: 479px) {
+	.intro-bg {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.stitle h2{
+		font-size: 30px;
+	}
+	.intro-inner .intro-content h2 {
+		font-size: 35px;
+		letter-spacing: 1px;
+	}
+	.intro-inner .intro-content p{
+		margin-top: 10px;
+	}
+	.about-top h2{
+		font-size: 20px;
+	}
+}
