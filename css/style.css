@@ -8,6 +8,7 @@ html,
 body {
 	height: 100%;
 	font-family: "Open Sans", sans-serif;
+	letter-spacing: 0.5px;
 }
 
 img {
@@ -791,6 +792,7 @@ hr {
 		margin-top: 1em;
 		font-size: 1.5em;
 	}
+
 	.about-top h2{
 		font-size: 20px;
 	}
