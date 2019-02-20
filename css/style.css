@@ -26,7 +26,7 @@ h4 {
 
 p {
 	font-size: 17px;
-	color: #6b6b6b;
+	color: #fff;
 	line-height: 30px;
 	font-family: "Open Sans", sans-serif;
 }
@@ -46,8 +46,8 @@ ul {
 hr {
 	max-width: 100px;
 	height: 2px;
-	border-top: 1px solid #066b98;
-	border-bottom: 1px solid #066b98;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
 }
 
 /*======================================================================
@@ -107,7 +107,7 @@ hr {
 	font-size: 40px;
 	font-weight: 300;
 	text-transform: capitalize;
-	color: #066b98;
+	color: #fff;
 }
 .stitle h3 {
 	font-family: "Open Sans", sans-serif;
@@ -208,7 +208,7 @@ hr {
 	position: fixed;
 	background: #000;
 	padding: 10px 30px;
-	border-bottom: 1px solid #27a2db;
+	border-bottom: 1px solid #fff;
 }
 
 .header-section.sticky .logo img {
@@ -216,11 +216,11 @@ hr {
 }
 
 .header-section.sticky .menu-list li a {
-	color: #808080;
+	color: #fff;
 }
 
 .header-section.sticky .menu-list li a:after {
-	background: #a0a0a0;
+	background: #fff;
 }
 
 /*======================================================================
@@ -245,8 +245,8 @@ hr {
 	height: 100%;
 	left: 0;
 	top: 0;
-	background: #000;
-	opacity: 0.6;
+	background: #111;
+	opacity: 0.5;
 }
 
 .intro-bg {
@@ -292,8 +292,8 @@ hr {
 ======================================================================*/
 .about-section {
 	position: relative;
-	background-color: #f3f5f7;
-	border-bottom: 1px solid #ccc;
+	background-color: #111;
+	border-top: 1px solid #fff;
 }
 
 .about-top {
@@ -301,7 +301,15 @@ hr {
 }
 
 .profile-img {
-	border: 3px ridge #066b98;
+	-webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.profile-img:hover {
+  	border-radius: 50%;
 }
 
 .about-text h2 {
@@ -309,7 +317,7 @@ hr {
 	font-weight: 300;
 	margin-bottom: 16px;
 	cursor: default;
-	color: #066b98;
+	color: #fff;
 }
 
 .about-text p ins {
@@ -320,24 +328,31 @@ hr {
 // Skillset styling.
 ======================================================================*/
 .skillset-section {
-	background-color: #e6eaee;
-	border-bottom: 1px solid #ccc;
+	background-color: #142634;
+	border-top: 1px solid #fff;
 }
 
 .skillset-item {
-	color: #344e5a;
+	color: #222;
 	text-align: center;
 	padding: 45px 15px;
-	background: #fff;
+	background: #BDC7C1;
 	border-radius: 5px;
-	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),
-				0 2px 8px 0 rgba(0,0,0,0.12);
-	border-bottom: 3px ridge #066b98;
-
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3),
+				0 2px 8px 0 rgba(0,0,0,0.2);
 }
 
 .skillset-item:hover {
-	transition: scale(1.05);
+	opacity: 1;
+  	background: #93aec2;
+	background: -moz-linear-gradient(-45deg, #93aec2 15%, #537188 100%);
+	background: -webkit-linear-gradient(-45deg, #93aec2 15%,#537188 100%);
+	background: linear-gradient(135deg, #93aec2 15%,#537188 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93aec2', endColorstr='#537188',GradientType=1 );
+}
+
+.skillset-item > p {
+	color: #444;
 }
 
 .skillset-item i {
@@ -347,8 +362,10 @@ hr {
 
 .skillset-item h4 {
 	text-transform: capitalize;
+	color: #222;
 	font-family: "Open Sans", sans-serif;
 	margin-bottom: 20px;
+	font-size: 1.6em;
 }
 
 .skillset-item p {
@@ -357,11 +374,11 @@ hr {
 }
 
 /*======================================================================
-// Experience and Education (resume) styling.
+// Experience and Education styling.
 ======================================================================*/
 .resume-section {
-	background-color: #f3f5f7;
-	border-bottom: 1px solid #ccc;
+	background-color: #111;
+	border-top: 1px solid #fff;
 }
 
 .resume-item {
@@ -369,7 +386,7 @@ hr {
 }
 
 .resume-item h2 {
-	color: #344e5a;
+	color: #5A666B;
 	font-size: 20px;
 }
 
@@ -390,7 +407,7 @@ hr {
 }
 
 .resume-item .resume-right h2 {
-	color: #344e5a;
+	color: #5A666B;
 	margin-bottom: 20px;
 }
 
@@ -416,7 +433,8 @@ hr {
 // Portfolio styling.
 ======================================================================*/
 .portfolio-section {
-	background-color: #e6eaee;
+	background-color: #142634;
+	border-top: 1px solid #fff;
 }
 
 .portfolio-filter {
@@ -430,13 +448,13 @@ hr {
 	font-size: 18px;
 	padding: 2px 0;
 	cursor: pointer;
-	color: #344e5a;
+	color: #fff;
 	-webkit-transition: all 0.4s ease 0s;
 	transition: all 0.4s ease 0s;
 }
 
 .portfolio-filter li.active {
-	background: #27a2db;
+	background: #111;
 	color: #fff;
 	padding: 3px 12px;
 	border-radius: 20px;
@@ -485,7 +503,7 @@ hr {
 	color: #fff;
 	font-size: 12px;
 	display: inline-block;
-	background: #27a2db;
+	background: #142634;
 	padding: 6px 20px;
 	border-radius: 20px;
 	opacity: 0;
@@ -564,7 +582,7 @@ hr {
 .work-popup-content a {
 	font-weight: 300;
 	font-size: 1.1em;
-	color: #27a2db;
+	color: #142634;
 	text-decoration: underline;
 }
 
@@ -574,7 +592,7 @@ hr {
 }
 
 .mfp-close-btn-in .mfp-close {
-	color: #27a2db;
+	color: #142634;
 	text-shadow: 0 0 11px black;
 }
 
@@ -582,8 +600,12 @@ hr {
 // Footer styling.
 ======================================================================*/
 
+.footer-section {
+	border-top: 1px solid #fff;
+}
+
 .footer-hr {
-	border-color: white;
+	border-color: #fff;
 }
 
 .footer-section .social-links {
@@ -643,7 +665,7 @@ hr {
 	height: 75px;
 	padding-top: 25px;
 	border-radius: 70px;
-	box-shadow: 0 0 15px 0px #27a2db;
+	box-shadow: 0 0 15px 0px #142634;
 	margin-bottom: 15px;
 	font-size: 25px;
 	color: white;
@@ -717,7 +739,7 @@ hr {
 		padding: 10px 30px;
 	}
 	.header-section.bgc {
-		background: #000;
+		background: #111;
 	}
 	.header-section.bgc .logo {
 		margin-bottom: 10px;
@@ -726,7 +748,7 @@ hr {
 		display: none;
 		float: none;
 		clear: both;
-		border-top: 1px solid #222;
+		border-top: 1px solid #fff;
 	}
 	.header-section .menu-list li {
 		display: inline;
