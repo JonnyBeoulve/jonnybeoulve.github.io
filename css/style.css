@@ -293,7 +293,6 @@ hr {
 .about-section {
 	position: relative;
 	background-color: #111;
-	border-top: 1px solid #93aec2;
 }
 
 .about-top {
@@ -329,7 +328,6 @@ hr {
 ======================================================================*/
 .skillset-section {
 	background-color: #142634;
-	border-top: 1px solid #93aec2;
 }
 
 .skillset-item {
@@ -373,7 +371,6 @@ hr {
 ======================================================================*/
 .resume-section {
 	background-color: #111;
-	border-top: 1px solid #93aec2;
 }
 
 .resume-item {
@@ -429,7 +426,6 @@ hr {
 ======================================================================*/
 .portfolio-section {
 	background-color: #142634;
-	border-top: 1px solid #93aec2;
 }
 
 .portfolio-filter {
