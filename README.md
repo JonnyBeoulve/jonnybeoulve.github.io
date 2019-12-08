@@ -1,3 +1,3 @@
 # jonnybeoulve.github.io
 
-This repository includes all the files required for my personal website hosted on GitHub Pages.
+This repository includes all the public files for hosting my portfolio on GitHub Pages.
